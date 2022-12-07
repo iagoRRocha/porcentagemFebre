@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: calc(100% - 30px);
+    height: 60%;
+
+    padding: 0;
+
+    border-radius: 20px;
+
+    background: #000;
+    color: white;
+}
+
+.linha {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100%;
+
+    margin: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.linha > .linha {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+
+    width: 100%;
+}
+
+.caixa-input {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin: 1rem;
+
+    height: 100%;
+}
+
+.caixa-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 5%;
+
+}
+
+.caixa-botao > button {
+    margin: 0.5rem;
+    padding: 0;
+
+    border: 1px solid rgb(102, 255, 0);
+    border-radius: 5px;
+    background: none;
+    color: rgb(102, 255, 0);
+
+    width: 100%;
+    height: 25px;
+
+    transition: 400ms;
+}
+
+.caixa-botao > button:hover {
+    border: 1px solid rgb(50, 126, 0);
+    background-color: rgb(102, 255, 0);
+    color: black;
+}
+
+
+
+input {
+    margin: 0.4rem;
+    padding: 0.2rem;
+
+    border-radius: 6px;
+    border: 1px solid gold;
+    color: white;
+
+    background: none;
+
+    width: 100%;
+    height: 20px;
+
+    outline: none;
+    transition: 400ms;
+}
+
+input:hover {
+    box-shadow: 0px 0px 5px gold;
+}
