@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +9,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Oswald', sans-serif;
 
     height: 100vh;
+
+    background: #e0e0e0;
+}
+
+h1, p {
+    color: black;
 }
 
 .linha {
@@ -42,14 +51,15 @@ body {
     flex-direction: column;
 
     width: calc(100% - 30px);
-    height: 70%;
+    height: 80%;
 
     padding: 0;
 
     border-radius: 20px;
 
-    background: #000;
-    color: white;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
 }
 
 .caixa-input {
@@ -77,10 +87,10 @@ body {
     margin: 0.5rem;
     padding: 0;
 
-    border: 1px solid rgb(102, 255, 0);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     background: none;
-    color: rgb(102, 255, 0);
+    color: rgb(0, 0, 0);
 
     width: 100%;
     height: 25px;
@@ -89,20 +99,21 @@ body {
 }
 
 .caixa-botao > button:hover {
-    border: 1px solid rgb(50, 126, 0);
-    background-color: rgb(102, 255, 0);
-    color: black;
+    border: 1px solid rgb(145, 145, 145);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
 
-input {
+.caixa-input > .linha > input,
+.caixa-input > .linha > .linha > input {
     margin: 0.4rem;
     padding: 0.2rem;
 
     border-radius: 6px;
-    border: 1px solid gold;
-    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 
     background: none;
 
@@ -114,7 +125,7 @@ input {
 }
 
 input:hover {
-    box-shadow: 0px 0px 5px gold;
+    box-shadow: 0px 0px 5px rgb(139, 139, 139);
 }
 
 /* ------------------------------ caixa 2 -------------------------------- */
@@ -135,14 +146,15 @@ input:hover {
     flex-direction: column;
 
     width: calc(100% - 30px);
-    height: 70%;
+    height: 80%;
 
     padding: 0;
 
     border-radius: 20px;
 
-    background: #000;
-    color: white;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
 }
 
 .caixa-resu {
@@ -155,4 +167,18 @@ input:hover {
 
     width: 100%;
     height: 100%;
+}
+
+.caixa-resu > .linha > input {
+    text-align: center;
+
+    width: 50px;
+    height: 18px;
+
+    border-radius: 2px;
+    border: none;
+    margin-bottom: 4px;
+    padding: 0;
+
+    background: green;
 }

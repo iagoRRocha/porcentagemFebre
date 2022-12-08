@@ -36,6 +36,10 @@
                 <p>Genero:</p><input type="text" id="genero">
             </div>
 
+            <div class="linha">
+                <p>CPF:</p><input type="text" id="cpf">
+            </div>
+
             <div class="caixa-botao">
                 <button onclick="enviar()">Enviar</button>
                 <button onclick="resultado()">Ver Resultado</button>
@@ -52,11 +56,11 @@
         <div class="coluna">
             <div class="caixa-resu">
                 <div class="linha">
-                    <p>Adultos com febre:</p>
-                </div>
-    
-                <div class="linha">
                     <p>Crianças com febre:</p>
+                </div>
+                
+                <div class="linha">
+                    <p>Adultos com febre:</p>
                 </div>
     
                 <div class="linha">
@@ -78,27 +82,27 @@
     
             <div class="caixa-resu">
                 <div class="linha">
-                    <span id="crianca-febre">0%</span>
+                    <input id="crianca-febre" value="0%">
                 </div>
     
                 <div class="linha">
-                    <span id="adulto-febre">0%</span>
+                    <input id="adulto-febre" value="0%">
                 </div>
     
                 <div class="linha">
-                    <span id="idoso-febre">0%</span>
+                    <input id="idoso-febre" value="0%">
                 </div>
     
                 <div class="linha">
-                    <span id="feminino">0</span>
+                    <input id="feminino" value="0">
                 </div>
     
                 <div class="linha">
-                    <span id="masculino">0</span>
+                    <input id="masculino" value="0">
                 </div>
     
                 <div class="linha">
-                    <span id="total">0</span>
+                    <input id="total" value="0">
                 </div>
     
             </div>
