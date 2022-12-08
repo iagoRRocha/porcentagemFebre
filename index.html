@@ -11,7 +11,7 @@
 
     <script src="./js/function.js" defer></script>
 
-    <div class="box1">
+    <div class="box" id="box">
         <div class="titulo">
             <h1>Cadastro</h1>
         </div>
@@ -24,7 +24,7 @@
     
             <div class="linha">            
                 <div class="linha">
-                    <p>Idade:   </p><input type="text" id="idade">
+                    <p>Idade:</p><input type="text" id="idade">
                 </div>
     
                 <div class="linha">
@@ -33,15 +33,80 @@
             </div>
 
             <div class="linha">
-                <p>Genero:</p><input type="text" id="temperatura">
+                <p>Genero:</p><input type="text" id="genero">
             </div>
 
             <div class="caixa-botao">
-                <button>Enviar</button>
-                <button>Ver Resultado</button>
+                <button onclick="enviar()">Enviar</button>
+                <button onclick="resultado()">Ver Resultado</button>
             </div>
         </div>
 
+    </div>
+
+    <div class="box2" id="box2">
+        <div class="titulo">
+            <h1>Resultado</h1>
+        </div>
+
+        <div class="coluna">
+            <div class="caixa-resu">
+                <div class="linha">
+                    <p>Adultos com febre:</p>
+                </div>
+    
+                <div class="linha">
+                    <p>Crianças com febre:</p>
+                </div>
+    
+                <div class="linha">
+                    <p>Idosos com febre:</p>
+                </div>
+    
+                <div class="linha">
+                    <p>Feminino:</p>
+                </div>
+    
+                <div class="linha">
+                    <p>Masculino:</p>
+                </div>
+    
+                <div class="linha">
+                    <p>Total com febre:</p>
+                </div>
+            </div>
+    
+            <div class="caixa-resu">
+                <div class="linha">
+                    <span id="crianca-febre">0%</span>
+                </div>
+    
+                <div class="linha">
+                    <span id="adulto-febre">0%</span>
+                </div>
+    
+                <div class="linha">
+                    <span id="idoso-febre">0%</span>
+                </div>
+    
+                <div class="linha">
+                    <span id="feminino">0</span>
+                </div>
+    
+                <div class="linha">
+                    <span id="masculino">0</span>
+                </div>
+    
+                <div class="linha">
+                    <span id="total">0</span>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="caixa-botao">
+            <button onclick="voltar()">Enviar mais</button>
+        </div>
     </div>
     
 </body>
