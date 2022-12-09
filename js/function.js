@@ -12,6 +12,8 @@ var adulto = 0
 var adulto_febre = 0
 var idoso = 0
 var idoso_febre = 0
+var porcentagem = []
+var total = 0
 
 function enviar() {
 
@@ -25,27 +27,19 @@ function enviar() {
             total = total + 1
 
             nome.push(document.querySelector('#nome').value)
-            console.log(nome)
-
             idade.push(document.querySelector('#idade').value)
-            console.log(idade)
-
             temperatura.push(document.querySelector('#temperatura').value)
-            console.log(temperatura)
-
             genero.push(document.querySelector('#genero').value)
-            console.log(genero)
-
             cpf.push(document.querySelector('#cpf').value)
-            console.log(cpf)
+
+
 
             for (var i = total - 1; i < total; i++) {
                 if (genero[i] == 'masculino') {
                     masculino++
                 }else if (genero[i] == 'feminino') {
                     feminino++
-                }
-        
+                }        
         
                 if (idade[i] < 18) {
                     crianca++
@@ -87,15 +81,10 @@ function enviar() {
 
             total = total + 1
             nome.push(document.querySelector('#nome').value)
-            console.log(nome)
             idade.push(document.querySelector('#idade').value)
-            console.log(idade)
             temperatura.push(document.querySelector('#temperatura').value)
-            console.log(temperatura)
             genero.push(document.querySelector('#genero').value)
-            console.log(genero)
             cpf.push(document.querySelector('#cpf').value)
-            console.log(cpf)
 
 
             for (var i = total - 1; i < total; i++) {
@@ -142,14 +131,32 @@ function resultado() {
     document.querySelector('#box2').style.display = "flex";
     document.querySelector('#box').style.display = "none";
 
-    document.querySelector('#crianca-febre').value = ((crianca_febre / crianca)*100).toFixed(1)+'%';
-    document.querySelector('#adulto-febre').value = ((adulto_febre / crianca)*100).toFixed(1)+'%';
-    document.querySelector('#idoso-febre').value = ((idoso_febre / idoso)*100).toFixed(1)+'%';
+    if (crianca_febre == 0 && crianca == 0) {
+        document.querySelector('#crianca-febre').value = '0%';
+    } else {
+        porcentagem[0] = (crianca_febre / crianca) * 100
+        document.querySelector('#crianca-febre').value = porcentagem[0].toFixed(1)+'%';
+    }
+
+    if (adulto_febre == 0 && adulto == 0) {
+        document.querySelector('#adulto-febre').value = '0%';
+    } else {
+        porcentagem[1] = (adulto_febre / adulto) * 100
+        document.querySelector('#adulto-febre').value = porcentagem[1].toFixed(1)+'%';
+    }
+
+    if (idoso_febre == 0 && idoso == 0) {
+        document.querySelector('#idoso-febre').value = '0%';
+    } else {
+        porcentagem[2] = (idoso_febre / idoso) * 100
+        document.querySelector('#idoso-febre').value = porcentagem[2].toFixed(1)+'%';
+    }
 
 
-    document.getElementById('feminino').value = feminino
-    document.getElementById('masculino').value = masculino
-    document.getElementById('total').value = total}
+    document.querySelector('#feminino').value = feminino
+    document.querySelector('#masculino').value = masculino
+    document.querySelector('#total').value = total
+}
 
 
 function voltar() {
