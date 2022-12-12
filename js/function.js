@@ -26,11 +26,11 @@ function enviar() {
         if (total == 0) {
             total = total + 1
 
-            nome.push(document.querySelector('#nome').value)
-            idade.push(document.querySelector('#idade').value)
-            temperatura.push(document.querySelector('#temperatura').value)
-            genero.push(document.querySelector('#genero').value)
-            cpf.push(document.querySelector('#cpf').value)
+            nome.push(document.querySelector('#nome').value.toLowerCase())
+            idade.push(document.querySelector('#idade').value.toLowerCase())
+            temperatura.push(document.querySelector('#temperatura').value.toLowerCase())
+            genero.push(document.querySelector('#genero').value.toLowerCase())
+            cpf.push(document.querySelector('#cpf').value.toLowerCase())
 
 
 
@@ -80,11 +80,11 @@ function enviar() {
             }
 
             total = total + 1
-            nome.push(document.querySelector('#nome').value)
-            idade.push(document.querySelector('#idade').value)
-            temperatura.push(document.querySelector('#temperatura').value)
-            genero.push(document.querySelector('#genero').value)
-            cpf.push(document.querySelector('#cpf').value)
+            nome.push(document.querySelector('#nome').value.toLowerCase())
+            idade.push(document.querySelector('#idade').value.toLowerCase())
+            temperatura.push(document.querySelector('#temperatura').value.toLowerCase())
+            genero.push(document.querySelector('#genero').value.toLowerCase())
+            cpf.push(document.querySelector('#cpf').value.toLowerCase())
 
 
             for (var i = total - 1; i < total; i++) {
