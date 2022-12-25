@@ -18,10 +18,10 @@ var total = 0
 function enviar() {
 
     if ((document.querySelector('#nome').value) != '' &&
-    (document.querySelector('#idade').value) != '' &&
-    (document.querySelector('#temperatura').value) != '' &&
-    (document.querySelector('#genero').value) != '' &&
-    (document.querySelector('#cpf').value) != '') {
+        (document.querySelector('#idade').value) != '' &&
+        (document.querySelector('#temperatura').value) != '' &&
+        (document.querySelector('#genero').value) != '' &&
+        (document.querySelector('#cpf').value) != '') {
 
         if (total == 0) {
             total = total + 1
@@ -37,21 +37,21 @@ function enviar() {
             for (var i = total - 1; i < total; i++) {
                 if (genero[i] == 'masculino') {
                     masculino++
-                }else if (genero[i] == 'feminino') {
+                } else if (genero[i] == 'feminino') {
                     feminino++
-                }        
-        
+                }
+
                 if (idade[i] < 18) {
                     crianca++
                     if (temperatura[i] > 37.8) {
                         crianca_febre++
                     }
-                }else if (idade[i] >= 18 && idade[i] <= 50) {
+                } else if (idade[i] >= 18 && idade[i] <= 50) {
                     adulto++
                     if (temperatura[i] > 37.8) {
                         adulto_febre++
                     }
-                }else if (idade[i] > 50) {
+                } else if (idade[i] > 50) {
                     idoso++
                     if (temperatura[i] > 37.8) {
                         idoso_febre++
@@ -90,7 +90,7 @@ function enviar() {
             for (var i = total - 1; i < total; i++) {
                 if (genero[i] == 'masculino') {
                     masculino++
-                }else if (genero[i] == 'feminino') {
+                } else if (genero[i] == 'feminino') {
                     feminino++
                 }
 
@@ -100,12 +100,12 @@ function enviar() {
                     if (temperatura[i] > 37.8) {
                         crianca_febre++
                     }
-                }else if (idade[i] >= 18 && idade[i] <= 50) {
+                } else if (idade[i] >= 18 && idade[i] <= 50) {
                     adulto++
                     if (temperatura[i] > 37.8) {
                         adulto_febre++
                     }
-                }else if (idade[i] > 50) {
+                } else if (idade[i] > 50) {
                     idoso++
                     if (temperatura[i] > 37.8) {
                         idoso_febre++
@@ -135,21 +135,21 @@ function resultado() {
         document.querySelector('#crianca-febre').value = '0%';
     } else {
         porcentagem[0] = (crianca_febre / crianca) * 100
-        document.querySelector('#crianca-febre').value = porcentagem[0].toFixed(1)+'%';
+        document.querySelector('#crianca-febre').value = porcentagem[0].toFixed(1) + '%';
     }
 
     if (adulto_febre == 0 && adulto == 0) {
         document.querySelector('#adulto-febre').value = '0%';
     } else {
         porcentagem[1] = (adulto_febre / adulto) * 100
-        document.querySelector('#adulto-febre').value = porcentagem[1].toFixed(1)+'%';
+        document.querySelector('#adulto-febre').value = porcentagem[1].toFixed(1) + '%';
     }
 
     if (idoso_febre == 0 && idoso == 0) {
         document.querySelector('#idoso-febre').value = '0%';
     } else {
         porcentagem[2] = (idoso_febre / idoso) * 100
-        document.querySelector('#idoso-febre').value = porcentagem[2].toFixed(1)+'%';
+        document.querySelector('#idoso-febre').value = porcentagem[2].toFixed(1) + '%';
     }
 
 
@@ -162,5 +162,5 @@ function resultado() {
 function voltar() {
     document.querySelector('#box2').style.display = "none";
     document.querySelector('#box').style.display = "flex";
-    
+
 }
